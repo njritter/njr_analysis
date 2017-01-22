@@ -1,3 +1,3 @@
 # njr_analysis
 
-Code I wrote to interact with Steve Van Hooser's vhtools to analyze data for Speed Training paper.
+Code for paper: 'Visual stimulus speed does not influence the rapid emergence of direction selectivity in ferret visual cortex' published in the Journal of Neuroscience in Jan 2017. Depends on Stephen Van Hooser's vhtools.
