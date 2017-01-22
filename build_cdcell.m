@@ -1,6 +1,6 @@
 function [cdc] = build_cdcell(cells,cellnames,type,ori_tested)
 
-% [CDC] = BUILD_CDCELL(CELLS,CELLNAMES,TYPE) - 
+% [CDC] = BUILD_CDCELL(CELLS,CELLNAMES,TYPE) -
 %
 % INPUTS:
 %       cells -
@@ -49,11 +49,12 @@ for i = 1:numcells,
     [cdc(i).rawresps_aligned, ...
         cdc(i).normresps_aligned] = cdc_get_aligned_resps(cdc(i));
     
-    cdc(i).dir = cdc_get_dir(cdc(i)); 
-    
-    %cdc(i).tunewidth = extract_oridir_test(
-    
+    cdc(i).dir = cdc_get_dir(cdc(i));
         
+    cdc(i).oridirtest = extract_oridir_test(cells{i},'SP F0 ',type, 'Ach ', 1); % Steve's Function
+    cdc(i).tunewidth = NaN;
+    if p < exclude, cdc(i).tunewidth = cdc(i).oridirtest.tunewidth; end;
+    
 end;
 
 
